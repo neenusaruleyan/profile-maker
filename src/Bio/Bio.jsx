@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { Input, Form, Button,Select, message } from "antd";
-import "./Bio.css";
+import { Input, Form, Button, Select, message } from "antd";
 import { PRIMARY_TECH, ROLE_DATA, SECONDARY_TECH } from "./Bio.constants";
 import DropDown from "../CommonComponents/DropDown";
+import "./Bio.css";
 
 function Bio() {
-  const { Option } = Select;
-
   const nameRules = [
     {
       required: true,
@@ -30,7 +28,7 @@ function Bio() {
       required: true,
       message: "Please enter your role",
     },
-    { type: 'array', message: 'xxxx' },
+    { type: "array", message: "xxxx" },
   ];
   const courseRules = [
     {
@@ -40,18 +38,18 @@ function Bio() {
   ];
   const primaryTechRules = [
     {
-      type: 'array',
+      type: "array",
       required: true,
-      message: 'Please select your habitual residence!',
+      message: "Please select your habitual residence!",
     },
-  ]
+  ];
   const secondaryTechRules = [
     {
-      type: 'array',
+      type: "array",
       required: true,
-      message: 'Please select your habitual residence!',
+      message: "Please select your habitual residence!",
     },
-  ]
+  ];
   const [formData, setFormData] = useState({
     name: "",
     experience: "",
@@ -62,42 +60,24 @@ function Bio() {
     secondaryTech: [],
   });
 
-  const handleSubmit =  () => {
-    console.log(formData)
-    // try {
-    //   // const values = await Form.validateFields();
-
-    //   setFormData({ ...formData, primaryTech: selectedItems });
-    //   console.log(
-    //     formData,
-    //     selectedCourses,
-    //     { role: selectedRoles },
-    //     { secondaryTech: selectedCourses }
-    //   );
-    // } catch (errorInfo) {
-    //   message.error("Please fill in all required fields.");
-    // }
+  const handleSubmit = () => {
+    console.log(formData);
   };
-  
-  const roleSelected=(value)=>{
-    
-    setFormData({ ...formData, role:[value]})
-  }
 
-  const primaryTechSelected=(value)=>{
-    
-    setFormData({ ...formData, primaryTech:value})
-  }
-  const secondaryTechSelected=(value)=>{
-    
-    setFormData({ ...formData, secondaryTech:value})
-  }
+  const roleSelected = (value) => {
+    setFormData({ ...formData, role: [value] });
+  };
 
- 
+  const primaryTechSelected = (value) => {
+    setFormData({ ...formData, primaryTech: value });
+  };
+  const secondaryTechSelected = (value) => {
+    setFormData({ ...formData, secondaryTech: value });
+  };
 
   return (
     <div>
-      <Form  onFinish={handleSubmit}>
+      <Form onFinish={handleSubmit}>
         <Form.Item label="Name" className="input" name="name" rules={nameRules}>
           <Input
             placeholder="Name"

@@ -4,16 +4,13 @@ export const ROLE_DATA = [
   { value: "Developer", label: "Developer" },
   { value: "QA", label: "QA" },
   { value: "Project Manager", label: "Project Manager" },
-
 ];
-
 export const PRIMARY_TECH = [
   { value: "HTML", label: "HTML" },
   { value: "CSS3", label: "CSS3" },
   { value: "JavaScript", label: "JavaScript" },
   { value: "ReactJS", label: "ReactJS" },
   { value: "Angular", label: "Angular" },
-  
 ];
 export const SECONDARY_TECH = [
   { value: "PHP", label: "PHP" },
@@ -23,4 +20,3 @@ export const SECONDARY_TECH = [
   { value: "Python", label: "Python" },
   { value: "Ruby", label: "Ruby" },
 ];
-// "Vue.JS", "Python", "JavaScript", "React.JS"
