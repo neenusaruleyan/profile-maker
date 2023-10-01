@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Button, Space, Select, Input, Checkbox, Modal } from "antd";
 import "./Summary.css";
+import ListSummary from "./ListSummary";
+import DropDown from "../CommonComponents/DropDown";
+import { PRIMARY_TECH } from "../Bio/Bio.constants";
+import DropdownWIthCheckbox from "../CommonComponents/DropdownWIthCheckbox";
 
 const { Option } = Select;
 const { TextArea } = Input;
@@ -78,35 +82,11 @@ function Summary() {
           onChange={(e) => setSearchText(e.target.value)}
           autoSize
         />
-        <Select
-          id="tags"
-          mode="multiple"
-          style={{ width: "100%" }}
-          placeholder="Search with Tags"
-          value={selectedTags}
-          onChange={(values) => setSelectedTags(values)}
-          optionLabelProp="label"
-        >
-          <Option value="HTML">
-            {" "}
-            <Checkbox>HTML</Checkbox>
-          </Option>
-          <Option value="JavaScript">
-            <Checkbox>JavaScript</Checkbox>
-          </Option>
-          <Option value="ReactJS">
-            <Checkbox>ReactJS</Checkbox>
-          </Option>
-          <Option value="Python">
-            <Checkbox>Python</Checkbox>
-          </Option>
-          <Option value="Angular">
-            <Checkbox>Angular</Checkbox>
-          </Option>
-          <Option value="Bootstrap">
-            <Checkbox>Bootstrap</Checkbox>
-          </Option>
-        </Select>
+        <DropdownWIthCheckbox mode={"multiple"}
+          data={PRIMARY_TECH}
+          selectedValue={selectedTags}
+          setSelectedValue={(values) => setSelectedTags(values)}
+          placeholder={'Search with tags'} />
         <Button type="primary" id="searchButton" onClick={handleSearch}>
           SEARCH
         </Button>
@@ -116,12 +96,12 @@ function Summary() {
 
       </div>
       <div className="results">
-        <p className="close-btn">HTML<button class="close-icon" type="reset"></button></p>
+        <p className="close-btn">HTML<button className="close-icon" type="reset"></button></p>
       </div>
 
       <Modal
         title="Add Summary"
-        visible={isModalVisible}
+        open={isModalVisible}
         onOk={handleModalSubmit}
         onCancel={handleModalCancel}
       >
@@ -154,23 +134,15 @@ function Summary() {
         </div>
         <div>
           <label htmlFor="modalTags">Tags:</label>
-          <Select
-            id="modalTags"
-            mode="multiple"
-            style={{ width: "100%" }}
-            placeholder="Select Tags"
-            value={modalTags}
-            onChange={(values) => setModalTags(values)}
-            optionLabelProp="label"
-          >
-            <Option value="HTML">HTML</Option>
-            <Option value="JavaScript">JavaScript</Option>
-            <Option value="ReactJS">ReactJS</Option>
-            <Option value="Python">Python</Option>
-          </Select>
+          <DropDown
+            mode={"multiple"}
+            data={PRIMARY_TECH}
+            selectedValue={modalTags}
+            setSelectedValue={(values) => setModalTags(values)}
+          />
         </div>
       </Modal>
-
+      <ListSummary />
     </div>
   );
 }

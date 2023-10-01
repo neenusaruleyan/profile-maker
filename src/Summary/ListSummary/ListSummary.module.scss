@@ -1,0 +1,58 @@
+.summarylist {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  width: 100%;
+  position: relative;
+  background-color: #d3e6f6;
+}
+.Listsummary {
+  margin-top: 1%;
+}
+.header {
+  display: inline-flex;
+  padding-inline: 25px;
+}
+.edit_btn {
+  position: absolute;
+  line-height: 12px;
+  margin-top: 25px;
+  margin-right: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.TAG_BUTTON {
+  height: 30px;
+  border: 2px solid rgb(206, 199, 199);
+  border-radius: 25px;
+  margin-top: 5px;
+}
+li {
+  color: rgb(132, 34, 34);
+}
+li span {
+  color: black;
+}
+.list_item {
+  text-align: start;
+}
+.description {
+  text-align: start;
+  width: 70%;
+  padding-left: 1%;
+}
+.tags_heading {
+  display: flex;
+  align-items: baseline;
+  gap: 15%;
+}
+.vertical {
+  border-left: 1px solid #86a5c5;
+  height: 25px;
+  padding-right: 15px;
+}
+.outerWidth {
+  width: 50%;
+}

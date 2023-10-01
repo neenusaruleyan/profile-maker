@@ -24,7 +24,6 @@
 
 .addSummary {
   line-height: 12px;
-
   margin-top: 15px;
   margin-right: 12px;
   position: absolute;
@@ -64,7 +63,7 @@
   cursor: pointer;
 }
 .close-icon:after {
-  content: "X";
+  content: 'X';
   width: 15px;
   height: 15px;
   position: absolute;
