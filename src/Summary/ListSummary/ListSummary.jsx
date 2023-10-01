@@ -18,14 +18,14 @@ function ListSummary(props) {
   return (
     <>
       {SUMMARY_LISTS.map(item => (
-        <div key={item.id} className={cn.Listsummary}>
-          <div className={cn.summarylist}>
+        <div key={item.id} className={cn.list_summary}>
+          <div className={cn.summary_list}>
             <Radio.Group onChange={onChange} value={selectedItem ? selectedItem.id : null} className={cn.radiogroup}>
               <Radio value={item.id}><h3>{item.title}</h3></Radio>
             </Radio.Group>
             <div className={cn.vertical}></div>
             <p className={cn.tags_heading}>Tags {item.tags.map(tag => 
-              (<button key={tag} className={cn.TAG_BUTTON}>{tag}</button>))}</p>
+              (<button key={tag} className={cn.tag_buttpn}>{tag}</button>))}</p>
             <Button className={cn.edit_btn}>EDIT</Button>
           </div>
           <p className={cn.description}>{item.description}</p>

@@ -1,4 +1,4 @@
-.summarylist {
+.summary_list {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -7,7 +7,7 @@
   position: relative;
   background-color: #d3e6f6;
 }
-.Listsummary {
+.list_summary {
   margin-top: 1%;
 }
 .header {
@@ -23,7 +23,7 @@
   top: 0;
   right: 0;
 }
-.TAG_BUTTON {
+.tag_button {
   height: 30px;
   border: 2px solid rgb(206, 199, 199);
   border-radius: 25px;
@@ -31,9 +31,10 @@
 }
 li {
   color: rgb(132, 34, 34);
-}
-li span {
-  color: black;
+  
+  li span {
+    color: black;
+  }
 }
 .list_item {
   text-align: start;
