@@ -3,8 +3,8 @@ import { Button, Space, Select, Input, Checkbox, Modal } from "antd";
 import ListSummary from "./ListSummary";
 import DropDown from "../CommonComponents/DropDown";
 import { PRIMARY_TECH } from "../Bio/Bio.constants";
-import DropdownWIthCheckbox from "../CommonComponents/DropdownWIthCheckbox";
 import "./Summary.css";
+import DropdownWIthCheckbox from "../CommonComponents/DropdownWIthCheckbox";
 
 const { Option } = Select;
 const { TextArea } = Input;
